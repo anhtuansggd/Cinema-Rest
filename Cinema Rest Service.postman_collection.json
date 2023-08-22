@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "fb54f66d-062c-4e8a-9ccc-15032c7e7b5e",
+		"name": "Cinema Rest Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25463480"
+	},
+	"item": [
+		{
+			"name": "Purchase Ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"row\": 4,\n    \"column\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:28852/purchase"
+			},
+			"response": []
+		},
+		{
+			"name": "Return ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"e938778d-34b4-4bfe-9f89-7b1e5f98ba6a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:28852/return"
+			},
+			"response": []
+		},
+		{
+			"name": "Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:28852/stats?password=super_secret",
+					"host": [
+						"localhost"
+					],
+					"port": "28852",
+					"path": [
+						"stats"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "super_secret"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
